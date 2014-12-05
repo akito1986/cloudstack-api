@@ -194,7 +194,7 @@ def print_list_csv(res,fields,no_headers):
 
 def get_headers(fields):
     fields_list = [ f.strip() for f in fields.split(',')]
-    if fields_list[0] == '*':
+    if fields_list[0] == '*' and len(fields_list) == 1:
       fields_list = []
     return fields_list
 
