@@ -11,7 +11,7 @@ import ConfigParser
 from cstack.utils import safe_option
 from stack import Stack
 
-API_CONF_PATH = os.path.join(os.path.expanduser("~"),".idcfrc")
+API_CONF_PATH = os.path.join(os.path.expanduser("~"),".cstackrc")
 logging.basicConfig(format="%(asctime)s %(module)s[%(lineno)d] [%(levelname)s]: %(message)s",
                     #filename = "log.txt",
                     level=logging.INFO)
@@ -30,15 +30,15 @@ def connect(host=None,api_key=None,secret_key=None,debug=False):
 
     try:
         if not host:
-            host = os.environ.get('IDCF_COMPUTE_HOST')
+            host = os.environ.get('CSTACK_COMPUTE_HOST')
             if not host:
                 host = safe_option(config,"account", "host")
         if not api_key:
-            api_key = os.environ.get('IDCF_COMPUTE_API_KEY')
+            api_key = os.environ.get('CSTACK_COMPUTE_API_KEY')
             if not api_key:
                 api_key = safe_option(config,"account", "api_key")
         if not secret_key:
-            secret_key = os.environ.get('IDCF_COMPUTE_SECRET_KEY')
+            secret_key = os.environ.get('CSTACK_COMPUTE_SECRET_KEY')
             if not secret_key:
                 secret_key = safe_option(config,"account","secret_key")
 
