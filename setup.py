@@ -5,7 +5,7 @@ import shutil
 
 VERSION = '0.1.1'
 
-setup(name='cloudstack.compute',
+setup(name='cloudstack-compute',
       version=VERSION,
       packages=['cloudstack','cloudstack.compute'],
       include_package_data=True,
