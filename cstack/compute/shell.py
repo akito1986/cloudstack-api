@@ -21,7 +21,7 @@ VERSION = '0.1.1'
 config = ConfigParser.SafeConfigParser()
 config.read(client.API_CONF_PATH)
 try:
-    api_refs_json_path = os.environ.get('IDCF_COMPUTE_API_REFS_JSON')
+    api_refs_json_path = os.environ.get('CSTACK_COMPUTE_API_REFS_JSON')
     if not api_refs_json_path:
         api_refs_json_path = config.get("account", "api_refs_json")
     api_refs = simplejson.load(open(api_refs_json_path,"r"))
@@ -62,7 +62,7 @@ class ShellCommand(object):
 def arg(*args,**kw):
     return (args, kw)
 
-class IdcfShell(object):
+class CstackShell(object):
     def __init__(self):
         self.arg_parser = argparse.ArgumentParser(
             prog = 'cstack-api',
@@ -234,4 +234,4 @@ def print_list(res,fields):
     pt.printt(sortby=headers[0])
 
 def main():
-    IdcfShell().execute(sys.argv[1:],True)
+    CstackShell().execute(sys.argv[1:],True)
