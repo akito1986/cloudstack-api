@@ -8,7 +8,7 @@ import time
 import os
 import sys
 import ConfigParser
-from cloudstack.utils import safe_option
+from cstack.utils import safe_option
 from stack import Stack
 
 API_CONF_PATH = os.path.join(os.path.expanduser("~"),".idcfrc")

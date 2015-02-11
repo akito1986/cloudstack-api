@@ -1,0 +1,3 @@
+[console_scripts]
+cstack-api = cstack.compute.shell:main
+

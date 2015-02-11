@@ -1,5 +1,5 @@
-from cloudstack.compute.shell import API_REFS
-from cloudstack.utils import res, dict2obj
+from cstack.compute.shell import API_REFS
+from cstack.utils import res, dict2obj
 import client
 import urllib
 import sys
