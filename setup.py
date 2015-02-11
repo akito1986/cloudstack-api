@@ -7,7 +7,7 @@ VERSION = '0.1.1'
 
 setup(name='cloudstack-compute',
       version=VERSION,
-      packages=['cloudstack','cloudstack-compute'],
+      packages=['cloudstack','cloudstack.compute'],
       include_package_data=True,
       install_requires=['setuptools',
                         'httplib2',
