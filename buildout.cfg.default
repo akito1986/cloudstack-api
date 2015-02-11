@@ -14,6 +14,6 @@ eggs =
     parsedatetime
     lxml
     cloudstack.compute
-entry-points = cloudstack-api=cloudstack.compute.shell:main
+entry-points = cstack-cli=cstack.compute.shell:main
 interpreter = python
-scripts = cloudstack-api
+scripts = cstack-cli

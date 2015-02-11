@@ -1,3 +1,3 @@
-include cloudstack/compute/apirefs.json
+include cstack/compute/apirefs.json
 include buildout.cfg.default
 

@@ -1,0 +1,17 @@
+MANIFEST.in
+buildout.cfg.default
+setup.py
+cstack/__init__.py
+cstack/ppj.py
+cstack/utils.py
+cstack-api.egg-info/PKG-INFO
+cstack-api.egg-info/SOURCES.txt
+cstack-api.egg-info/dependency_links.txt
+cstack-api.egg-info/entry_points.txt
+cstack-api.egg-info/requires.txt
+cstack-api.egg-info/top_level.txt
+cstack/compute/__init__.py
+cstack/compute/apirefs.json
+cstack/compute/client.py
+cstack/compute/shell.py
+cstack/compute/stack.py

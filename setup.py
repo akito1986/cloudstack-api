@@ -5,9 +5,9 @@ import shutil
 
 VERSION = '0.1.1'
 
-setup(name='cloudstack-compute',
+setup(name='cstack-api',
       version=VERSION,
-      packages=['cloudstack','cloudstack.compute'],
+      packages=['cstack','cstack.compute'],
       include_package_data=True,
       install_requires=['setuptools',
                         'httplib2',
@@ -19,7 +19,7 @@ setup(name='cloudstack-compute',
                         ],
       entry_points={
         'console_scripts': [
-            'cloudstack-api = cloudstack.compute.shell:main'
+            'cstack-api = cstack.compute.shell:main'
             ]
         }
       )

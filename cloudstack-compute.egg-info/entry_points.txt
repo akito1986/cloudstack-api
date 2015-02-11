@@ -1,3 +1,0 @@
-[console_scripts]
-cloudstack-api = cloudstack.compute.shell:main
-
