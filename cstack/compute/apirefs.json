@@ -13672,7 +13672,12 @@
         "required": "true"
       },
       {
-        "option": "--tags",
+        "option": "--tags[0].key",
+        "help": "Map of tags (key/value pairs)",
+        "required": "true"
+      },
+      {
+        "option": "--tags[0].value",
         "help": "Map of tags (key/value pairs)",
         "required": "true"
       },
