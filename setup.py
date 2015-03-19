@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 import os
 import shutil
 
-VERSION = '0.1.2'
+VERSION = '0.1.3'
 
 setup(name='cstack-api',
       version=VERSION,
@@ -13,8 +13,8 @@ setup(name='cstack-api',
                         'httplib2',
                         'simplejson',
                         'argparse',
-                        'prettytable==0.5',
-                        'parsedatetime==0.8.7',
+                        'prettytable>=0.5',
+                        'parsedatetime>=0.8.7',
                         'lxml',
                         ],
       entry_points={

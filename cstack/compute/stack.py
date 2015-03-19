@@ -27,8 +27,8 @@ class Stack(object):
         if not query or not query.has_key('response'):
             query['response'] = 'json'
 
-        query_str = '&'.join(['='.join([k,urllib.quote_plus(query[k])]) for k in query.keys()])
-        signature_str = '&'.join(['='.join([k.lower(),urllib.quote_plus(query[k].lower().replace('+','%20'))])for k in sorted(query.iterkeys())])
+        query_str = query_str = '&'.join(['='.join([k,urllib.quote_plus(query[k]).replace('+', '%20')]) for k in query.keys()])
+        signature_str = '&'.join(['='.join([k.lower(),urllib.quote_plus(query[k]).replace('+','%20').lower()])for k in sorted(query.iterkeys())])
         signature = urllib.quote_plus(base64.encodestring(hmac.new(self.secret_key,signature_str,hashlib.sha1).digest()).strip())        
         return (query_str, signature)
 
